@@ -1,0 +1,226 @@
+# Root .gitignore for dhoni-hobar-mojar-khela project
+# This file protects important project files from being committed to version control
+
+# ==========================================
+# HIGHLY SENSITIVE - DO NOT COMMIT
+# ==========================================
+
+# Environment Variables (API keys, secrets, etc.)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env*
+
+# Firebase Configuration (sensitive)
+client/firebase.rules.json
+client/src/types/firebase.ts
+client/FIREBASE_INTEGRATION.md
+backend/firebase.json
+firebase-debug.log
+firebase-debug.*.log
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.mongo
+
+# SSL Certificates and Keys
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
+
+# API Keys and Tokens
+*.secret
+*.password
+*.token
+*api_key*
+*API_KEY*
+
+# ==========================================
+# BUILD OUTPUTS AND DEPENDENCIES
+# ==========================================
+
+# Dependencies
+node_modules/
+client/node_modules/
+backend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build Outputs
+dist/
+client/dist/
+backend/dist/
+build/
+client/build/
+.next/
+out/
+.nuxt/
+
+# Cache directories
+.cache/
+.parcel-cache/
+.vite/
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# ==========================================
+# DEVELOPMENT AND EDITOR FILES
+# ==========================================
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==========================================
+# LOGS AND TEMPORARY FILES
+# ==========================================
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output
+
+# Temporary folders
+tmp/
+temp/
+
+# ==========================================
+# PROJECT SPECIFIC PROTECTION
+# ==========================================
+
+# Game assets and proprietary files
+client/src/components/
+client/src/App.tsx
+client/src/constants.ts
+client/src/types.ts
+client/src/vite-env.d.ts
+client/src/components/Board.tsx
+client/src/components/GameSetup.tsx
+client/src/types/firebase.ts
+backend/src/
+backend/src/server.ts
+backend/src/config/
+backend/src/models/
+
+# Configuration files (may contain sensitive info)
+client/vite.config.ts
+client/tailwind.config.js
+client/tsconfig.json
+backend/package.json
+backend/tsconfig.json
+
+# Documentation (may contain sensitive info)
+*.md
+!README.md
+!SECURITY_README.md
+
+# Startup scripts (may contain paths/keys)
+start.bat
+start.sh
+
+# ==========================================
+# BACKUP AND ARCHIVE FILES
+# ==========================================
+
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.tmp
+
+# ==========================================
+# DEPLOYMENT AND HOSTING
+# ==========================================
+
+.vercel/
+.railway/
+.netlify/
+
+# ==========================================
+# SECURITY - NEVER COMMIT THESE
+# ==========================================
+
+# Private keys
+id_rsa
+id_dsa
+*.pem
+
+# AWS credentials
+.aws/
+credentials
+
+# Google Cloud
+gcloud/
+*.json
+
+# Azure
+.azure/
+
+# Heroku
+.heroku/
+
+# ==========================================
+# ADDITIONAL SECURITY MEASURES
+# ==========================================
+
+# Prevent committing entire directories
+client/src/
+backend/src/
+!client/src/index.html
+!client/src/index.tsx
+!client/package.json
+!package.json
+
+# Lock files (can be committed, but protect sensitive ones)
+# package-lock.json and yarn.lock are usually committed, but can contain paths
+
+# ==========================================
+# FINAL PROTECTION - IGNORE EVERYTHING EXCEPT ESSENTIALS
+# ==========================================
+
+# Uncomment the following lines to make the repo completely private
+# * (allow only specific files)
+# !README.md
+# !.gitignore
+# !client/package.json
+# !client/index.html
+# !client/index.tsx
